@@ -9,6 +9,6 @@
     "code_reviews":  { "enabled": true, "count_towards_score": true },
     "line_stats":    { "enabled": false, "refactor_threshold": 0.1 }
   },
-  "private_repos": "include",
+  "private_repos": "exclude",
   "users": ["Jadu07"]
 }
