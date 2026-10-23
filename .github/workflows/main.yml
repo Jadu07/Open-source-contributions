@@ -1,0 +1,79 @@
+name: Open Source Contribution Tracker Job
+
+on:
+  schedule:
+    # Runs every 24 hours
+    - cron: '0 0 * * *'
+  # This can be used to allow manually triggering nightlies from the web interface
+  workflow_dispatch:
+
+jobs:
+  nightly-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.x'
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run script
+        run: |
+          python generate_report.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
+          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
+
+      # Last line of defence before anything is committed and published: every repository named in
+      # the report must be public. The check prints counts only, since this log is public.
+      - name: Check the report names only public repositories
+        run: |
+          python check_output_visibility.py output
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
+          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and push changes
+        run: |
+          git add output/*
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Run workflow and update to latest reports"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    permissions:
+      # See https://stackoverflow.com/questions/72851548/permission-denied-to-github-actionsbot
+      contents: write
+
+  # Publish the dashboard from the data committed above. This is a separate workflow call because
+  # pushes made with GITHUB_TOKEN do not trigger other workflows.
+  deploy:
+    needs: nightly-job
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy-dashboard.yml
+    secrets:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

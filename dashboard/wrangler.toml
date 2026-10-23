@@ -1,0 +1,10 @@
+name = "opensource-contribs-data"
+compatibility_date = "2024-01-01"
+
+# Static site only: the activity feed is copied into app/dist at build time
+# (see app/scripts/copy-data.mjs), so no Worker script is needed.
+[build]
+command = "npm --prefix app install && npm --prefix app run build"
+
+[assets]
+directory = "./app/dist"

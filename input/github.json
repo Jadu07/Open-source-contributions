@@ -1,0 +1,14 @@
+{
+  "start_date": "2023-01-01",
+  "contribution_config": {
+    "commits":       { "enabled": true, "count_towards_score": true },
+    "open_prs":      { "enabled": true, "count_towards_score": true },
+    "closed_prs":    { "enabled": true, "count_towards_score": false },
+    "open_issues":   { "enabled": true, "count_towards_score": true },
+    "closed_issues": { "enabled": true, "count_towards_score": true },
+    "code_reviews":  { "enabled": true, "count_towards_score": true },
+    "line_stats":    { "enabled": false, "refactor_threshold": 0.1 }
+  },
+  "private_repos": "include",
+  "users": ["Jadu07"]
+}
