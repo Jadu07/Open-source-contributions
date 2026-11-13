@@ -1,6 +1,6 @@
 # OpenSource Contributions Report
 
-*Report auto-generated on: 2026-11-12 05:33:57 for period 2023-01-01 to 2026-11-13*
+*Report auto-generated on: 2026-11-13 04:51:01 for period 2023-01-01 to 2026-11-14*
 
 ## Overall Summary
 
@@ -86,7 +86,7 @@
 | ghostmkg/programming-language | <img src='https://avatars.githubusercontent.com/u/155181043?v=4' width='12' height='12'> [ghostmkg/programming-language](https://github.com/ghostmkg/programming-language) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | 64 | 3 | 0 | 4 | 0 | 0 | 0 | 3 |
 | excalidraw/excalidraw | <img src='https://avatars.githubusercontent.com/u/59452120?v=4' width='12' height='12'> [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | N/A | 0 | 1 | 0 | 1 | 0 | 0 | 2 |
 | EDOPS-IND/edops | <img src='https://avatars.githubusercontent.com/u/326812527?v=4' width='12' height='12'> [EDOPS-IND/edops](https://github.com/EDOPS-IND/edops) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | 2 | 20 | 0 | 14 | 0 | 0 | 0 | 20 |
-| drawdb-io/drawdb | <img src='https://avatars.githubusercontent.com/u/139706923?v=4' width='12' height='12'> [drawdb-io/drawdb](https://github.com/drawdb-io/drawdb) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | 93 | 1 | 2 | 1 | 0 | 1 | 0 | 4 |
+| drawdb-io/drawdb | <img src='https://avatars.githubusercontent.com/u/139706923?v=4' width='12' height='12'> [drawdb-io/drawdb](https://github.com/drawdb-io/drawdb) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | 94 | 1 | 2 | 1 | 0 | 1 | 0 | 4 |
 | Automattic/mongoose | <img src='https://avatars.githubusercontent.com/u/887802?v=4' width='12' height='12'> [Automattic/mongoose](https://github.com/Automattic/mongoose) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | 283 | 2 | 0 | 1 | 0 | 0 | 1 | 3 |
 | apache/airflow | <img src='https://avatars.githubusercontent.com/u/47359?v=4' width='12' height='12'> [apache/airflow](https://github.com/apache/airflow) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | N/A | 2 | 0 | 2 | 0 | 0 | 0 | 2 |
 | simple-icons/simple-icons | <img src='https://avatars.githubusercontent.com/u/29872746?v=4' width='12' height='12'> [simple-icons/simple-icons](https://github.com/simple-icons/simple-icons) | <img src='https://avatars.githubusercontent.com/u/129044960?v=4' width='12' height='12'> [Yashraj Chouhan](https://github.com/Jadu07) | N/A | 0 | 2 | 0 | 0 | 0 | 1 | 3 |
